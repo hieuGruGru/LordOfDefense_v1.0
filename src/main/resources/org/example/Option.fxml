@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.OptionController">
+   <children>
+      <JFXButton layoutX="563.0" layoutY="183.0" onAction="#goToMain" text="GOGOGO" />
+      <JFXButton layoutX="555.0" layoutY="244.0" onAction="#backToLogin" text="OhFUckBack" />
+      <Pane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="20.0" prefWidth="1200.0">
+         <children>
+            <FontAwesomeIconView glyphName="CLOSE" layoutX="1166.0" layoutY="18.0" onMouseClicked="#close" size="25" />
+            <FontAwesomeIconView glyphName="MINUS" layoutX="1136.0" layoutY="19.0" onMouseClicked="#minimize" size="25" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
