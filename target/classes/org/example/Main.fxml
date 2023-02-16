@@ -3,13 +3,17 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane prefHeight="1040.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainController">
    <children>
-      <JFXButton layoutX="1140.0" layoutY="125.0" onAction="#letFight" text="Fight" />
+      <JFXButton layoutX="1140.0" layoutY="125.0" onAction="#letFight" onMousePressed="#pressed" text="Fight" />
       <JFXButton layoutX="1141.0" layoutY="228.0" onAction="#backToOption" text="Back" />
       <Label fx:id="NotiLabel" layoutX="1148.0" layoutY="57.0" text="Label" />
       <Pane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="30.0" prefWidth="1200.0">
@@ -18,11 +22,32 @@
             <FontAwesomeIconView glyphName="MINUS" layoutX="1136.0" layoutY="25.0" onMouseClicked="#minimize" size="25" />
          </children>
       </Pane>
+      <ImageView fx:id="charImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@image/map!.png" />
+         </image>
+      </ImageView>
       <Pane layoutX="10.0" layoutY="30.0" prefHeight="1000.0" prefWidth="1000.0">
          <children>
             <GridPane fx:id="gridPane" prefHeight="1000.0" prefWidth="1000.0">
-            </GridPane>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints></GridPane>
          </children>
       </Pane>
+      <ImageView fx:id="dropTest" fitHeight="100.0" fitWidth="100.0" layoutX="1106.0" layoutY="313.0" onMouseDragged="#imageDragged" onMousePressed="#pressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/map@.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
